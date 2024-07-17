@@ -69,6 +69,7 @@ $$
 ### 参考コードの数式化
 
 1. **初期化**:
+
    $$
    d(v) = 
    \begin{cases}
@@ -78,34 +79,43 @@ $$
    $$
 
 2. **エッジの緩和**:
+
    $$
    \text{for each } (u, v) \in E \text{ do}
    $$
+
    $$
    \quad \text{if } d(u) + w(u, v) < d(v) \text{ then } d(v) = d(u) + w(u, v)
    $$
    
 3. **負の重みサイクルのチェック**:
+
    $$
    \text{for each } (u, v) \in E \text{ do}
    $$
+
    $$
    \quad \text{if } d(u) + w(u, v) < d(v) \text{ then グラフには負の重みサイクルが存在する}
    $$
 
 4. **最短経路の構築**:
+
    $$
    \text{while } current\_node \neq s \text{ do}
    $$
+
    $$
    \quad path.push(current\_node)
    $$
+
    $$
    \quad current\_node = pred(current\_node)
    $$
+
    $$
    path.push(s)
    $$
+   
    $$
    path.reverse()
    $$
