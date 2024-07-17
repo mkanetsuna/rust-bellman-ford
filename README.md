@@ -44,7 +44,7 @@ $$
 \text{if } d(u) + w(u, v) < d(v) \text{ then } d(v) = d(u) + w(u, v)
 $$
 
-*ここで、$w(u, v)$ はエッジ $(u, v)$ の重み
+*ここで、 $w(u, v)$ はエッジ $(u, v)$ の重み
 
 ### 負の重みサイクルのチェック
 グラフの全エッジ $(u, v) \in E$ に対して、以下の条件をチェックする。
@@ -70,13 +70,13 @@ $$
 
 1. **初期化**:
 
-   $$
+$$
    d(v) = 
    \begin{cases}
    0 & \text{if } v = s \\
    \infty & \text{otherwise}
    \end{cases}
-   $$
+$$
 
 2. **エッジの緩和**:
 
@@ -115,7 +115,7 @@ $$
    $$
    path.push(s)
    $$
-   
+
    $$
    path.reverse()
    $$
