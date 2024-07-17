@@ -101,15 +101,15 @@ $$
 4. **最短経路の構築**:
 
 $$
-   \text{while } current\_node \neq s \text{ do}
+   \text{while } currentNode \neq s \text{ do}
 $$
 
 $$
-   \quad path.push(current\_node)
+   \quad path.push(currentNode)
 $$
 
 $$
-   \quad current\_node = pred(current\_node)
+   \quad currentNode = pred(currentNode)
 $$
 
 $$
