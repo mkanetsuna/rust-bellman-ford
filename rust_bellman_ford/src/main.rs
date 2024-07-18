@@ -50,15 +50,16 @@ fn bellman_ford(graph: &HashMap<i32, HashMap<i32, i32>>, start: i32, end: i32) -
 
 fn main() {
     let graph: HashMap<i32, HashMap<i32, i32>> = [
-        (1, [(2, 30), (3, 50), (4, 55)].iter().cloned().collect()),
-        (2, [(3, 10), (4, 20)].iter().cloned().collect()),
-        (3, [(4, 10), (5, 20)].iter().cloned().collect()),
-        (4, [(5, 35)].iter().cloned().collect()),
-        (5, HashMap::new())
+        (1, [(2, 3), (3, 2)].iter().cloned().collect()),
+        (2, [(1, 3), (4, 5), (5, 7)].iter().cloned().collect()),
+        (3, [(1, 2), (5, 9)].iter().cloned().collect()),
+        (4, [(2, 5), (5, -5), (6, 8)].iter().cloned().collect()),
+        (5, [(2, 7), (3, 9), (6, 4)].iter().cloned().collect()),
+        (6, [(4, 8), (5, 4)].iter().cloned().collect())
     ].iter().cloned().collect();
 
     let start = 1;
-    let end = 5;
+    let end = 6;
 
     let (distance, path) = bellman_ford(&graph, start, end);
 
